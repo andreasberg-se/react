@@ -46,6 +46,22 @@ hr {
     border-width: 0px;
 }
 
+button.menu {
+    margin: 10px;
+    padding: 5px;
+    background-color: #3f3faf;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1f1f9f;
+    border-radius: 5px;
+    color: #dddddd;
+}
+
+button.menu:hover {
+    background-color: #9f9fff;
+    color: #ffffff;
+}
+
 article:hover {
     background-color: #dfffff;
 }

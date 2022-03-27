@@ -40,8 +40,7 @@ class AddPersonForm extends Component {
 
   submitForm = (event) => {
     event.preventDefault();
-    ReactDOM.unmountComponentAtNode(document.getElementById('Details'));
-    ReactDOM.render(<AddPerson data={this.state} />, document.getElementById('Details'));
+    ReactDOM.render(<AddPerson data={this.state} />, document.getElementById('View'));
   };
 
   render() {

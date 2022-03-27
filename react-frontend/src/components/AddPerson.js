@@ -1,9 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import PeopleDisplay from "./PeopleDisplay";
-import PeopleTableHeader from "./PeopleTableHeader";
-import PeopleTableBody from "./PeopleTableBody";
-import AddPersonForm from "./AddPersonForm";
 
 class AddPerson extends Component {
   constructor(props) {
@@ -50,13 +45,6 @@ class AddPerson extends Component {
     } else if (!isAdded) {
       return <div>Adding ...</div>
     } else {
-      ReactDOM.unmountComponentAtNode(document.getElementById('List'));
-      ReactDOM.render(<PeopleDisplay />, document.getElementById('List'));
-      ReactDOM.unmountComponentAtNode(document.getElementById('Table'));
-      ReactDOM.render(<table><PeopleTableHeader /><PeopleTableBody /></table>,
-       document.getElementById('Table'));
-      ReactDOM.unmountComponentAtNode(document.getElementById('Form'));
-      ReactDOM.render(<AddPersonForm />, document.getElementById('Form'));
       return (
         <article className="add">
           <h2>Person is added!</h2>

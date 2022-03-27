@@ -34,8 +34,7 @@ class ShowPersonDetails extends Component {
 
   render() {
     const clickDelete = (id) => {
-      ReactDOM.unmountComponentAtNode(document.getElementById('Details'));
-      ReactDOM.render(<DeletePerson id={id} />, document.getElementById('Details'));
+      ReactDOM.render(<DeletePerson id={id} />, document.getElementById('View'));
     };
 
     const {error, isLoaded, persons} = this.state;

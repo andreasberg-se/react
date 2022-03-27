@@ -33,8 +33,7 @@ class PeopleTableBody extends Component {
 
   render() {
     const showDetails = (id) => {
-      ReactDOM.unmountComponentAtNode(document.getElementById('Details'));
-      ReactDOM.render(<ShowPersonDetails id={id} />, document.getElementById('Details'));
+      ReactDOM.render(<ShowPersonDetails id={id} />, document.getElementById('View'));
     }
     const {error, isLoaded, people} = this.state;
     if (error) {

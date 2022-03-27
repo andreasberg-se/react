@@ -1,37 +1,24 @@
 import './App.css';
 import React from "react";
-import PeopleDisplay from "./components/PeopleDisplay";
-import PeopleTableHeader from "./components/PeopleTableHeader";
-import PeopleTableBody from "./components/PeopleTableBody";
-import AddPersonForm from "./components/AddPersonForm";
+import menuClick, { MENU_OPTIONS } from "./components/Menu";
 
 function App() {
   return (
     <div className="App">
       <h1>People</h1>
 
-      <div id="Details"></div>
+      <button className="menu" onClick={ e => menuClick(MENU_OPTIONS.TABLE_VIEW) }>Table View</button>
+      <button className="menu" onClick={ e => menuClick(MENU_OPTIONS.LIST_VIEW) }>List View</button>
+      <button className="menu" onClick={ e => menuClick(MENU_OPTIONS.ADD_PERSON) }>Add person</button>
 
       <hr />
-      <p>[Styled Component]</p>
-      <div id="List">
-      <PeopleDisplay></PeopleDisplay>
-      </div>
+
+      <div id="View">[ React App ]</div>
 
       <hr />
-      <p>[Table Component]</p>
-      <div id="Table">
-        <table>    
-          <PeopleTableHeader />
-          <PeopleTableBody />  
-        </table>
-      </div>
 
-      <hr />
-      <p>[Add Person]</p>
-      <div id="Form">
-      <AddPersonForm />
-      </div>
+      <div>&copy; 2022, Andreas Berg.</div>
+
     </div>
   );
 }
