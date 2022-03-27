@@ -1,0 +1,29 @@
+@model CountryViewModel
+@{
+    ViewData["Title"] = "Add Country";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if ((User.IsInRole("Moderator")) || (User.IsInRole("Admin")))
+{
+    <form asp-controller="Country" asp-action="Index" method="post">
+
+        <div asp-validation-summary="ModelOnly"></div>
+
+        <label asp-for="Name" class="left"></label>
+        <input asp-for="Name" />
+        <label class="left"></label>
+        <span asp-validation-for="Name" class="validation"></span>
+
+        <label class="left">&nbsp;</label>
+        <input type="submit" value="Add country" class="create" />
+
+    </form>
+}
+else
+{
+    <p><em>You must be a moderator or an administrator to modify content!</em></p>
+}
+
+<p><a asp-controller="Person" asp-action="Index">Back to index</a></p>

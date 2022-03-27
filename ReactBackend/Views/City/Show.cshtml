@@ -1,0 +1,30 @@
+@model List<City>
+@{
+    ViewData["Title"] = "View/Delete Cities";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (ViewBag.Message != null)
+{
+    <strong>@ViewBag.Message</strong>
+}
+
+<table>
+    @foreach(var city in Model)
+    {
+        <tr>
+            <td>@city.Name</td>
+            @if ((User.IsInRole("Admin")) || (User.IsInRole("Moderator")))
+            {
+                <td><a asp-controller="City" asp-action="Edit" asp-route-cityId="@city.CityId">Edit</a></td>
+            }
+            @if (User.IsInRole("Admin"))
+            {
+                <td><a asp-controller="City" asp-action="Show" asp-route-cityId="@city.CityId">Delete</a></td>
+            }
+        </tr>
+    }
+</table>
+
+<p><a asp-controller="Person" asp-action="Index">Back to index</a></p>
