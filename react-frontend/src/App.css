@@ -1,0 +1,207 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+hr {
+    margin: 20px auto 10px auto;
+    width: 100%;
+    max-width: 1024px;
+    height: 1px;
+    background-color: #8f8f8f;
+    border-width: 0px;
+}
+
+article:hover {
+    background-color: #dfffff;
+}
+
+article.details {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    padding: 20px 0px;
+    background-color: #ffffdf;
+    border-radius: 5px;
+}
+
+article.details:hover {
+    background-color: #ffffdf;
+}
+
+article.add {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    padding: 20px 0px;
+    background-color: #dfffdf;
+    border-radius: 5px;
+}
+
+article.add:hover {
+    background-color: #dfffdf;
+}
+
+article.delete {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    padding: 20px 0px;
+    background-color: #dfffdf;
+    border-radius: 5px;
+}
+
+article.delete:hover {
+    background-color: #dfffdf;
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+}
+
+thead {
+    background-color: #efefef;
+}
+
+thead > tr {
+    line-height: 200%;
+}
+
+tbody > tr:hover {
+    background-color: #dfffff;
+}
+
+tbody > tr {
+    line-height: 200%;
+}
+
+form {
+    display: grid;
+    grid-template: auto / 1fr 2fr 8fr 1fr;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    padding: 20px 0px;
+    background-color: #dfffff;
+    border-radius: 5px;
+}
+
+label {
+    grid-column: 2;
+    padding: 15px;
+    text-align: left;
+}
+
+input {
+    grid-column: 3;
+    margin: 10px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bfbfbf;
+    border-radius: 5px;
+}
+
+input:hover {
+    border-color: #bfbfff;
+}
+
+select {
+    grid-column: 3;
+    margin: 10px;
+    padding: 5px;
+    background-color: #e8e8e8;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bfbfbf;
+    border-radius: 5px;
+}
+
+select:hover {
+    background-color: #f8f8f8;
+}
+
+button {
+    grid-column: 3;
+    margin: 10px;
+    padding: 5px;
+    background-color: #afffaf;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #8fdf8f;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #cfefcf;
+}
+
+button.details {
+    margin: 10px;
+    padding: 5px;
+    background-color: #6f6faf;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #5f5f9f;
+    border-radius: 5px;
+    color: #dddddd;
+}
+
+button.details:hover {
+    background-color: #afafff;
+    color: #ffffff;
+}
+
+button.delete {
+    margin: 10px;
+    padding: 5px;
+    background-color: #af6f6f;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #9f5f5f;
+    border-radius: 5px;
+    color: #dddddd;
+}
+
+button.delete:hover {
+    background-color: #ffafaf;
+    color: #ffffff;
+}
+
